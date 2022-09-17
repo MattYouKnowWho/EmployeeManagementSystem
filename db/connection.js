@@ -4,12 +4,12 @@ const util = require("util");
 
 const db = mysql.createConnection({
   user: "root",
-  password: "root",
+  password: "",
   host: "localhost",
   database: "employees",
 });
 
-connection.connect(function (err) {
+db.connect(function (err) {
   if (err) throw err;
 });
 db.query = util.promisify(db.query);
