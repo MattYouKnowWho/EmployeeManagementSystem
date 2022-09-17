@@ -1,21 +1,21 @@
 const inquirer = require("inquirer");
-const db = require("./db");
+const db = require("./db/connection");
 
-const startMenu = {
-  name: "functionality",
-  message: "Hello, welcome to employee manager, what would you like to do?",
-  type: "list",
-  choices: [
-    'View all departments', 
-    'View all roles', 
-    'View all employees', 
-    'Add a department', 
-    'Add a role', 
-    'Add an employee', 
-    'Update an employee role',
-    'Exit'
-  ],
-};
+const starterPrompt = {
+  name: 'action',
+  message: 'Hello, welcome to the employee management system, What would you like to do?',
+  type: 'list',
+    choices: [
+      'View all departments', 
+      'View all roles', 
+      'View all employees', 
+      'Add a department', 
+      'Add a role', 
+      'Add an employee', 
+      'Update an employee role',
+      'Exit'
+    ]
+}
 
 const viewAllDepartments = ()=> {
   db.query('SELECT * FROM department').then(results => {

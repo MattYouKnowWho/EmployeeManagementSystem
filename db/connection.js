@@ -9,6 +9,7 @@ const db = mysql.createConnection({
   database: "employees",
 });
 
+
 db.query = util.promisify(db.query);
 
 module.exports = db;
