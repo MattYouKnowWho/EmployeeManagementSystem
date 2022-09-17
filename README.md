@@ -31,7 +31,7 @@ A command-line application from scratch to manage a company's employee database,
 
 # DEMO
 
-Link to Youtube: 
+Link to Youtube: https://youtu.be/16LR2oa1az0
 
 # Author
 
